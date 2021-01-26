@@ -48,7 +48,8 @@ to see user jhon details
 `curl --location --request GET 'http://localhost:5000/users/jhon'`
 
 
-**User APIS **
+
+**User APIS**
 
 1. update the user details 
 
