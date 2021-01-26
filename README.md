@@ -54,9 +54,9 @@ to see user jhon details
 
 1. update the user details 
 
-        sample:
-        update the details for jhon (*need to provide old password to update the details*)
-        `
+    sample:
+    update the details for jhon (*need to provide old password to update the details*)
+        
         curl --location --request PUT 'http://localhost:5000/user/update' \
         --header 'Content-Type: application/json' \
         --data-raw '{
@@ -66,26 +66,26 @@ to see user jhon details
             "password_old" : "jhon2020",
             "password_new" : "jhon2020"
         }'
-        `
+
 
 2. login user
 
-        sample:
-        login jhon
-        `
+    sample:
+    login jhon
+        
         curl --location --request POST 'http://localhost:5000/user/login' \
         --header 'Content-Type: application/json' \
         --data-raw '{
             "user_id": "jhon",
             "password": "jhon2020"
         }'
-        `
+
 
 3. add a post 
 
-        sample
-        add a post for jhon
-        `
+    sample
+    add a post for jhon
+        
         curl --location --request POST 'http://localhost:5000/user/add/post' \
         --header 'Content-Type: application/json' \
         --data-raw '{
@@ -93,13 +93,13 @@ to see user jhon details
             "post_id": "1",
             "post": "I am feeling good"
         }'
-        `
+        
 
 4. update a post 
 
-        sample 
-        update a post for jhon
-        `
+    sample 
+    update a post for jhon
+        
         curl --location --request PUT 'http://localhost:5000/user/update/post' \
         --header 'Content-Type: application/json' \
         --data-raw '{
@@ -107,17 +107,15 @@ to see user jhon details
             "post_id": "1",
             "post": "I am lucky"
         }'
-        `
 
 5. get all post 
 
-        sample
-        get all post for jhon
-        `
+    sample
+    get all post for jhon
+        
         curl --location --request GET 'http://localhost:5000/user/posts/jhon'
-        `
+        
 
-6. delete a post 
-
-sample 
-`curl --location --request DELETE 'http://localhost:5000/user/jhon/delete/post/1'`
+6. delete a post, sample 
+        
+        curl --location --request DELETE 'http://localhost:5000/user/jhon/delete/post/1'
