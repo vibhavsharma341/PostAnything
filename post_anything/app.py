@@ -320,7 +320,9 @@ def add_post():
 
 # This api will delete the post for a user
 @app.route('/user/<string:uid>/delete/post/<string:pid>', methods=['DELETE'])
-def delete_post(_uid, _pid):
+def delete_post(uid, pid):
+    _uid = uid
+    _pid = pid
     if _uid not in _login_users:
         resp = jsonify("User not login")
         resp.status_code = 401
@@ -342,7 +344,8 @@ def delete_post(_uid, _pid):
 
 # This api will delete all the posts for a user
 @app.route('/user/<string:uid>/delete_all/post', methods=['DELETE'])
-def delete_posts(_uid):
+def delete_posts(uid):
+    _uid = uid
     if _uid not in _login_users:
         resp = jsonify("User not login")
         resp.status_code = 401
