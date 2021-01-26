@@ -25,18 +25,18 @@ list of apis :
 
 1. add a user
 
-sample : 
-add a user jhon
-`
-curl --location --request POST 'http://localhost:5000/user/add' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "user_id" : "jhon",
-    "name" : "jhon",
-    "email" : "jhon@gmail.com",
-    "password" : "jhon2020"
-}'
-`
+    sample : 
+    add a user jhon
+
+        curl --location --request POST 'http://localhost:5000/user/add' \
+        --header 'Content-Type: application/json' \
+        --data-raw '{
+            "user_id" : "jhon",
+            "name" : "jhon",
+            "email" : "jhon@gmail.com",
+            "password" : "jhon2020"
+        }'
+
 
 2. get all the users 
 
@@ -46,6 +46,7 @@ curl --location --request POST 'http://localhost:5000/user/add' \
 
 sample :
 to see user jhon details
+
 `curl --location --request GET 'http://localhost:5000/users/jhon'`
 
 
